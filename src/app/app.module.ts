@@ -3,19 +3,23 @@ import { NgModule, ErrorHandler } from '@angular/core';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
 import { MyApp } from './app.component';
 
-import { HelloIonicPage } from '../pages/hello-ionic/hello-ionic';
-import { ItemDetailsPage } from '../pages/item-details/item-details';
-import { ListPage } from '../pages/list/list';
+import { HomePage } from '../pages/home/home';
+import { SnapPage } from '../pages/snap/snap';
+import { ListenPage } from '../pages/listen/listen';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import { Camera } from '@ionic-native/camera';
+import { Base64ToGallery } from '@ionic-native/base64-to-gallery';
+import { Media } from '@ionic-native/media';
+
 @NgModule({
   declarations: [
     MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage
+    HomePage,
+    ListenPage,
+    SnapPage,
   ],
   imports: [
     BrowserModule,
@@ -24,13 +28,16 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HelloIonicPage,
-    ItemDetailsPage,
-    ListPage
+    HomePage,
+    ListenPage,
+    SnapPage,
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    Camera,
+    Base64ToGallery,
+    Media,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

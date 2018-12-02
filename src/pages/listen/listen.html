@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Listen them</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-card>
+      <ion-card-content>
+
+        <button ion-button (click)="startrecord()" >Start Recording</button><br />
+        <button ion-button (click)="stoprecord()" >Stop Recording</button>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>
